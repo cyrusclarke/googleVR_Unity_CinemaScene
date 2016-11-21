@@ -1,0 +1,22 @@
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+
+public class TimedInputObject : MonoBehaviour, TimedInputHandler {
+//	public Text counterText;
+	public MovieTexture movTex;
+//	public float seconds, minutes; 
+
+	public void HandleTimeInput() {
+		GetComponent<Renderer> ().material.mainTexture = movTex;
+		movTex.Play (); 
+
+	}
+
+	public void HandleTimeOutput() {
+		GetComponent<Renderer> ().material.mainTexture = movTex;
+		movTex.Pause (); 
+	}
+
+}
